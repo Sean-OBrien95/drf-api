@@ -123,10 +123,6 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io',
-)
 
 CORS_ALLOW_CREDENTIALS = True
 
