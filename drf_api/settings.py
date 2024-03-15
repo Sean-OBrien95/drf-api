@@ -125,6 +125,10 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 # CORS_ALLOW_ALL = True
 
+ALLOWED_ORIGINS = [
+    'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io',
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_ALLOW_ALL = True
