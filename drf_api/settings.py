@@ -131,10 +131,6 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io',
-    'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io/profiles',
-    'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io/posts',
-    'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io/followers',
-    'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io/likes',
 )
 
 ROOT_URLCONF = 'drf_api.urls'
