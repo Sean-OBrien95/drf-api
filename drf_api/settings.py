@@ -103,9 +103,11 @@ INSTALLED_APPS = [
     'likes',
     'followers',
 ]
+
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -114,7 +116,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
@@ -125,7 +126,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 # CORS_ALLOW_ALL = True
 
-ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
     'https://3000-seanobrien95-moments-lvz1d49y9hh.ws-eu110.gitpod.io',
 ]
 
