@@ -35,10 +35,16 @@ REST_FRAMEWORK = {
         if 'DEV' in os.environ
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
     )],
-    'DEFAULT_PAGINATION_CLASS':  'rest_framework.pagination.PageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
-     'DATETIME_FORMAT': '%d %b %Y'
-    }
+    'DATETIME_FORMAT': '%d %b %Y',
+}
+
+if 'DEV' not in os.environ:
+    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
+        'rest_framework.renderers.JSONRenderer',
+    ]
 
 if 'DEV' in os.environ:
     DATABASES = {
@@ -73,7 +79,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 # DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), '8000-seanobrien95-drfapi-vpqqp4zhbuj.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), '8000-seanobrien95-drfapi-vpqqp4zhbuj.ws-eu110.gitpod.io']
 
 
 # Application definition
